@@ -55,7 +55,7 @@ class CameraButton extends React.Component {
                 onPress={this.showImagePicker.bind(this)}
                 style={[this.props.style,styles.cameraBtn]}>
                 <View>
-                    <Icon name="md-camera" color="#aaa" size={34}/>
+                    <Icon name="md-happy" color="red" size={34}/>
                     {conText}
                 </View>
             </TouchableOpacity>
@@ -96,18 +96,15 @@ class CameraButton extends React.Component {
                     loading:true
                 });
                 this.props.onFileUpload(file,response.fileName||'未命名文件.jpg')
-                .then(result=>{
-                    this.setState({
-                        loading:false
-                    })
-                })
             }
         });
     }
 }
 const styles = StyleSheet.create({
     cameraBtn: {
-        padding:5
+        padding:5,
+        borderColor: 'red',
+        borderWidth: 1,
     },
     count:{
         color:'#fff',

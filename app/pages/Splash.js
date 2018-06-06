@@ -26,6 +26,7 @@ import FadeInView from './FadeInView'
 import Tab from './Tab'
 import TabTopView from './TabTopView'
 import Photo from './Photo'
+import Mbox1 from './Mbox1'
 class Splash extends Component {
   constructor(props) {
     super(props)
@@ -138,6 +139,12 @@ class Splash extends Component {
         component: Photo
     })
   }
+  pressButton13() {
+    this.props.navigator.push({
+        title: 'thirteen1',
+        component: Mbox1
+    })
+  }
     render() {
         return (
             <View style={{flex: 1}}>
@@ -203,6 +210,9 @@ class Splash extends Component {
           </TouchableOpacity>
           <TouchableOpacity onPress={this.pressButton12.bind(this)}>
                     <Text style={styles.defaultText}>跳往photo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.pressButton13.bind(this)}>
+                    <Text style={styles.defaultText}>跳往mbox</Text>
           </TouchableOpacity>
 
             </View>
