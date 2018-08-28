@@ -18,7 +18,7 @@ export default class Root extends Component {
     render() {
         return (
             <View>
-                <App />
+               <App />
             </View>
          
         )

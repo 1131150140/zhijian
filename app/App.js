@@ -5,6 +5,8 @@
  */
 
 import React, { Component } from 'react';
+import initReactFastclick from 'react-fastclick';
+initReactFastclick();
 import {
   Platform,
   StyleSheet,
@@ -19,8 +21,13 @@ import {
   ListView
 } from 'react-native';
 import {Navigator} from "react-native-deprecated-custom-components" 
-import Splash from './pages/Splash';
+import AntdDemo from './pages/AntdDemo';
 const {width, height} = Dimensions.get('window');
+// import Resolution from "./utils/Resolution"
+import Login from './pages/Zhijian/Login'
+import Index from './pages/Zhijian/Index'
+import Splash from './pages/Splash'
+
 
 
 export default class App extends Component {
@@ -34,11 +41,11 @@ export default class App extends Component {
       <View style={{width,height}}>
        <StatusBar
                     barStyle='light-content'
-                    backgroundColor='transparent'
+                    backgroundColor='#6EA6FF'
                     translucent={true}
                 />
           <Navigator
-                    initialRoute={{name: 'Splash', component: Splash}}
+                    initialRoute={{name: 'Splash', component: Index}}
                     configureScene = {(route) => {
                       return Navigator.SceneConfigs.FadeAndroid
                     }}
@@ -54,25 +61,17 @@ export default class App extends Component {
                 />
                
          
-      </View>
+               </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    height:80,
-    flexDirection: 'row',
-    borderRadius: 5,
-    marginTop: 30,
-    marginLeft: 5,
-    marginRight: 5,
-    backgroundColor: '#ff0067',
-    padding: 2
-  },
-  flex1: {
-    flex: 1,
-    backgroundColor : "#3399cc"
+    flex:1,
+    borderColor: 'red',
+    borderWidth: 1,
+    width:750,
   }
  
 
