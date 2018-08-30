@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Navgin from './Navgin'
+import BaseComponent from '../../base/baseComponent';
 
-export default class componentName extends Component {
+export default class componentName extends BaseComponent {
   constructor(props) {
     super(props);
     this.state = {
+     
     };
   }
-
-  render() {
+  getNavigationBarProps() {
+    return {
+      leftButtonImage: require('../../images/search_min.png'),
+      rightButtonImage: require('../../images/individual_center.png'),
+      title: '电影',
+    }
+  }
+  onLeftPressed() {
+    alert('left')
+  }
+  onRightPressed() {
+    alert('right')
+  }
+  renderBody() {
     return (
       <View style={styles.container}>
-        <Navgin />
+        <Text >123123</Text>
       </View>
     );
   }
@@ -20,5 +33,7 @@ export default class componentName extends Component {
 const styles = StyleSheet.create({
   container: {
     flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
   }  
 });
