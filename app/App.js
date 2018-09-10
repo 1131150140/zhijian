@@ -83,7 +83,7 @@ export default class App extends Component {
           configureScene={this.configureScene}
           renderScene={this.renderScene}
           initialRoute={{
-            name: 'Index',//index
+            name: 'Login',//index
           }}/>
       </View>
     );

@@ -26,7 +26,7 @@ import FadeInView from './FadeInView'
 import Tab from './Tab'
 import TabTopView from './TabTopView'
 import Photo from './Photo'
-import Mbox1 from './Mbox1'
+
 class Splash extends Component {
   constructor(props) {
     super(props)

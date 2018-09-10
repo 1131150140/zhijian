@@ -7,6 +7,6 @@ const deviceWidthDp = Dimensions.get('window').width;
 const uiWidthPx = 750;
 
 // px 转 dp（设计稿中的 px 转 rn 中的 dp）
-export const pTd = (uiElePx) => {
+export const rem = (uiElePx) => {
   return uiElePx * deviceWidthDp / uiWidthPx;
 }

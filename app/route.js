@@ -6,6 +6,8 @@ import {
   Navigator,
 } from 'react-native';
 import Index from './pages/Zhijian/Index'
+import Login from './pages/Zhijian/Login'
+import CustomerAggent from './pages/Zhijian/CustomerAggent'
 let navigator;
 
 const routeMap = new Map();
@@ -13,6 +15,12 @@ const routeMap = new Map();
 routeMap.set('Index', {
   component: Index
 });
+routeMap.set('Login', {
+  component: Login
+})
+routeMap.set('CustomerAggent', {
+  component: CustomerAggent
+})
 
 
 export function registerNavigator(tempNavigator) {

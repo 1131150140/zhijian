@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text,  StyleSheet,TextInput, PixelRatio, TouchableOpacity   } from 'react-native';
-import {pTd} from '../../utils/util'
+import {rem} from '../../utils/util'
+import Index from './Index'
+import {getNavigator} from '../../route';
 export default class componentName extends Component {
   constructor(props) {
     super(props);
@@ -10,14 +12,17 @@ export default class componentName extends Component {
     };
   }
   onPressLearnMore() {
-
+    getNavigator().push({
+        name: 'Index'
+    });
   }
+  
 
   render() {
     return (
       <View style={styles.widhd}>
         <View style={styles.header}>
-            <Text style={styles.wenzi}>登录</Text>
+            <Text style={styles.wenzi} >登录</Text>
         </View>
         <View style={styles.inputs}>
             <TextInput
@@ -40,17 +45,15 @@ export default class componentName extends Component {
         />
         </View>
         <View style={styles.juz}>
-        <TouchableOpacity
-            onPress={()=> {
-                this.onPressLearnMore
-            }}
-        >
+       
             <View style={styles.btn}>
+            <TouchableOpacity onPress={this.onPressLearnMore.bind(this)}>
                 <Text style={styles.btnText}>
                     登录
                 </Text>
+                </TouchableOpacity>    
             </View>
-        </TouchableOpacity>
+       
        
         </View>
         
@@ -66,58 +69,58 @@ const styles = StyleSheet.create({
         alignItems: 'center'
    },
    header: {
-       height: pTd(256),
-       width: pTd(750)
+       height: rem(256),
+       width: rem(750)
    },
    wenzi: {
-       fontSize: pTd(48),
+       fontSize: rem(48),
        color: '#fff',
-       lineHeight:pTd(280),
+       lineHeight:rem(280),
        textAlign:'center'
    },
    inputs: {
-       height: pTd(110),
+       height: rem(110),
        display: 'flex',
        alignItems: 'center',
        justifyContent: 'center',
        borderBottomColor: '#e6e6e6',
        borderBottomWidth: 1/PixelRatio.get(),
-       width:pTd(630)
+       width:rem(630)
    },
    inputs1: {
-    height: pTd(110),
+    height: rem(110),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomColor: '#e6e6e6',
     borderBottomWidth: 1/PixelRatio.get(),
-    width:pTd(630),
+    width:rem(630),
     overflow: 'hidden',
     },
     juz: {
-        marginTop:pTd(130)
+        marginTop:rem(130)
     },
    password: {
-    width:pTd(630),
-    height:pTd(68),
+    width:rem(630),
+    height:rem(68),
     borderWidth: 0,
     padding: 0,
-    fontSize:pTd(28),
+    fontSize:rem(28),
     color: '#fff',
-    marginTop: pTd(36),
+    marginTop: rem(36),
     },
     btn: {
-        width:pTd(630),
-        height:pTd(80),
+        width:rem(630),
+        height:rem(80),
         backgroundColor: '#fff',
-        borderRadius:pTd(40),
+        borderRadius:rem(40),
         display: 'flex',
         justifyContent: 'center',
         padding:0
     },
     btnText: {
         textAlign: 'center',
-        fontSize: pTd(28),
+        fontSize: rem(28),
         color: '#0189FF',
     }
 

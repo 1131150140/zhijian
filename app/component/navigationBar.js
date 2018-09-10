@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import commonStyle from '../style/commonStyle';
 // import MusicControlButton from './musicControlButton';
-
+import {rem} from '../utils/util'
 const windowWidth = Dimensions.get('window').width;
 
 const defaultNavigationHeight = 50;
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   navigationBarTitle: {
     color: commonStyle.TEXT_COLOR,
-    fontSize: 22,
+    fontSize: rem(34),
     textAlign: 'center',
     fontWeight: '400',
   },
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   rightButtonTextStyle: {
     color: commonStyle.TEXT_GRAY_COLOR,
     textAlign: 'right',
-    fontSize: 16,
+    fontSize: rem(30),
     marginRight: 10
   },
   image: {
